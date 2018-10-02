@@ -2,11 +2,10 @@
 
 ## About
 
-
-
-This is the Docker Compose files for a Shiny Server Pro setup using Shiny Floating License Server, Auth0 and NginX.
-
-
+This is the Docker Compose files for a Shiny Server Pro. It includes:
+- [x] RStudio Shiny Floating License Server
+- [x] Multi-factor authentication with Auth0
+- [x] Reverse-proxying with NginX
 
 Please see the [RStudio Documentation](http://docs.rstudio.com/shiny-server/) for more information.
 
