@@ -8,11 +8,9 @@ services:
     ports:
       - "8080:80"
       - "8443:443"
-    # command: /bin/bash -c "envsubst < /etc/nginx/conf.d/nginx.template > /etc/nginx/nginx.conf && cat /etc/nginx/nginx.conf && exec nginx -c /etc/nginx/nginx.conf"
     command: "nginx -c /etc/nginx/nginx.conf"
 
   auth0:
-    # build: https://github.com/mapic/shiny-auth0.docker.git
     image: mapic/shiny-auth0
     volumes:
       - ./auth0.env:/usr/src/app/auth0.env
