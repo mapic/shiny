@@ -3,9 +3,10 @@
 ## About
 
 This is the Docker Compose files for a Shiny Server Pro. It includes:
-- [x] RStudio Shiny Floating License Server
-- [x] Multi-factor authentication with Auth0
-- [x] Reverse-proxying with NginX
+- [x] Shiny Server Pro 1.5.9 running on Ubuntu 16.04 (`mapic/shiny-server-pro`)
+- [x] Shiny Floating License Server (`mapic/shiny-floating-license-server`)
+- [x] Multi-factor authentication with Auth0 (`mapic/shiny-auth0`)
+- [x] Reverse-proxying with NginX (`mapic/shiny-nginx`)
 
 Please see the [RStudio Documentation](http://docs.rstudio.com/shiny-server/) for more information.
 
