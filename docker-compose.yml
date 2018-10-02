@@ -11,7 +11,7 @@ services:
     command: "nginx -c /etc/nginx/nginx.conf"
 
   auth0:
-    image: mapic/shiny-auth0
+    image: mapic/shiny-auth0:latest
     environment:
       - AUTH0_CLIENT_SECRET=myCoolSecret
       - AUTH0_CLIENT_ID=myCoolClientId
@@ -21,12 +21,10 @@ services:
       - SHINY_HOST=localhost
       - SHINY_PORT=3838
       - PORT=3000
-    volumes:
-      - ./auth0.env:/usr/src/app/auth0.env
     command: "npm start"
 
   shiny:
-    image: mapic/shiny-server-pro
+    image: mapic/shiny-server-pro:latest
     volumes:
       - ./shiny-server.conf:/etc/shiny-server/shiny-server.conf
     environment:
