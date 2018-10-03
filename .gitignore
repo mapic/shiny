@@ -1,2 +1,3 @@
 *.pem
 docker-compose.yml
+auth0.conf
