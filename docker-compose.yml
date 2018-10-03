@@ -2,13 +2,18 @@ version: "3"
 
 services:
   nginx: 
-    image: nginx:latest
+    image: mapic/shiny-nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.certbot.conf:/etc/nginx/nginx.certbot.conf
+      - ./ssl/:/home/ssl/
     ports:
       - "80:80"
       - "443:443"
-    command: "nginx -c /etc/nginx/nginx.conf"
+    environment:
+      - CERTBOT_DOMAIN=cloud.ngi.no
+      - CERTBOT_EMAIL=knutole@mapic.io
+    command: "bash docker-entrypoint.sh"
 
   auth0:
     image: mapic/shiny-auth0:latest
