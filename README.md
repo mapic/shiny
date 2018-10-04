@@ -35,7 +35,7 @@ That's it!
 ## Run
 
 ### Start Floating License Server
-See https://github.com/mapic/shiny-floating-license-server.docker
+In order for the Shiny Server Pro server to work, you need to have a running floating license server. Please see https://github.com/mapic/shiny-floating-license-server.docker for easy install.
 
 ### Start server
 
