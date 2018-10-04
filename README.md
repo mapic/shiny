@@ -22,13 +22,25 @@ cd shiny
 
 
 ## Run
+### Start server
 
 ```bash
 # start server
 bash start-shiny-server-pro.sh
 ```
 
+### Stop server
 ```bash
 # stop server
 bash stop-shiny-server-pro.sh
+```
+
+### Show logs
+```bash
+docker-compose logs -f
+```
+
+### Show running Docker containers
+```bash
+docker ps
 ```
