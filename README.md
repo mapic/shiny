@@ -23,7 +23,6 @@ cd shiny
 ### Configure Shiny
 Edit the `config/shiny-server.conf`. See http://docs.rstudio.com/shiny-server/#configuration-settings for details on configuration settings.
 
-That's it!
 
 ### Configure NginX
 Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
@@ -31,6 +30,7 @@ Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `se
 ### Configure Auth0
 Edit the `config/auth0.env` file (copy it from the default `auth0.env.default` file first).
 
+That's it!
 
 ## Run
 ### Start server
