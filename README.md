@@ -33,6 +33,7 @@ bash start-shiny-server-pro.sh
 ```bash
 # stop server
 bash stop-shiny-server-pro.sh
+# (use ctrl-c to exit logs and keep containers running)
 ```
 
 ### Show logs
