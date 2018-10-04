@@ -1,7 +1,5 @@
 # Shiny Server Pro
 
-[![SSL Rating](https://sslbadge.org/?domain=cloud.ngi.no)](https://www.ssllabs.com/ssltest/analyze.html?d=cloud.ngi.no)
-
 ## About
 
 These are the Docker Compose files for a Shiny Server Pro. It includes:
@@ -19,6 +17,19 @@ git clone https://github.com/mapic/shiny.git
 cd shiny
 
 ```
+
+## Configure
+
+### Configure Shiny
+Edit the `config/shiny-server.conf`. See http://docs.rstudio.com/shiny-server/#configuration-settings for details on configuration settings.
+
+That's it!
+
+### Configure NginX
+Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
+
+### Configure Auth0
+Edit the `config/auth0.env` file (copy it from the default `auth0.env.default` file first).
 
 
 ## Run
@@ -38,10 +49,12 @@ bash stop-shiny-server-pro.sh
 
 ### Show logs
 ```bash
+# show logs
 docker-compose logs -f
 ```
 
 ### Show running Docker containers
 ```bash
+# show running docker containers
 docker ps
 ```
