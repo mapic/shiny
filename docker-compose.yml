@@ -19,7 +19,10 @@ services:
   auth0:
     image: mapic/shiny-auth0:latest
     env_file: config/auth0.env
-    command: "npm start"
+    volumes:
+      - ../shiny-auth0/app/:/usr/src/app # for debug only
+    # command: "npm start"
+    command: "bash docker-entrypoint.sh" # for debug only
 
   shiny:
     image: mapic/shiny-server-pro:latest
