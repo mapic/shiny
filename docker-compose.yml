@@ -4,8 +4,8 @@ services:
   nginx: 
     image: mapic/shiny-nginx:latest
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx.certbot.conf:/etc/nginx/nginx.certbot.conf
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/nginx.certbot.conf:/etc/nginx/nginx.certbot.conf
       - ./ssl/:/home/ssl/
     ports:
       - "80:80"
@@ -17,13 +17,13 @@ services:
 
   auth0:
     image: mapic/shiny-auth0:latest
-    env_file: auth0.conf
+    env_file: config/auth0.conf
     command: "npm start"
 
   shiny:
     image: mapic/shiny-server-pro:latest
     volumes:
-      - ./shiny-server.conf:/etc/shiny-server/shiny-server.conf
+      - ./config/shiny-server.conf:/etc/shiny-server/shiny-server.conf
     environment:
       - SHINY_LICENSE_PORT=8979
       - SHINY_LICENSE_SERVER=shiny-floating-license-server

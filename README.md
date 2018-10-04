@@ -1,5 +1,7 @@
 # Shiny Server Pro
 
+[![SSL Rating](https://sslbadge.org/?domain=cloud.ngi.no)](https://www.ssllabs.com/ssltest/analyze.html?d=cloud.ngi.no)
+
 ## About
 
 This is the Docker Compose files for a Shiny Server Pro. It includes:
