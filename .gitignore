@@ -1,2 +1,3 @@
 *.pem
 auth0.conf
+*.env
