@@ -33,6 +33,10 @@ Edit the `config/auth0.env` file (copy it from the default `auth0.env.default` f
 That's it!
 
 ## Run
+
+### Start Floating License Server
+See https://github.com/mapic/shiny-floating-license-server.docker
+
 ### Start server
 
 ```bash
