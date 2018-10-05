@@ -1,3 +1,6 @@
 *.pem
 auth0.conf
 *.env
+*_key
+*_key.pub
+sftp.users.conf
