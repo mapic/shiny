@@ -11,28 +11,21 @@ services:
       - "80:80"
       - "443:443"
     env_file: config/nginx.env
-    # environment:
-    #   - CERTBOT_DOMAIN=cloud.ngi.no
-    #   - CERTBOT_EMAIL=knutole@mapic.io
     command: "bash docker-entrypoint.sh"
 
   auth0:
     image: mapic/shiny-auth0:latest
     env_file: config/auth0.env
-    volumes:
-      - ../shiny-auth0/app/:/usr/src/app # for debug only
     # command: "npm start"
-    command: "bash docker-entrypoint.sh" # for debug only
+    volumes:                              # for debug only
+      - ../shiny-auth0/app/:/usr/src/app  # for debug only
+    command: "bash docker-entrypoint.sh"  # for debug only
 
   shiny:
     image: mapic/shiny-server-pro:latest
     env_file: config/shiny.env
     volumes:
       - ./config/shiny-server.conf:/etc/shiny-server/shiny-server.conf
-    # environment:
-    #   - SHINY_LICENSE_PORT=8979
-    #   - SHINY_LICENSE_SERVER=shiny-floating-license-server
-
 
 networks:
   default:
