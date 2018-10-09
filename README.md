@@ -3,12 +3,12 @@
 ## About
 
 These are the Docker Compose files for a Shiny Server Pro. It includes:
-- [x] Shiny Server Pro 1.5.9 running on Ubuntu 16.04 (`mapic/shiny-server-pro`)
-- [x] Shiny Floating License Server (`mapic/shiny-floating-license-server`)
-- [x] Multi-factor authentication with Auth0 (`mapic/shiny-auth0`)
-- [x] Reverse-proxying with NginX (`mapic/shiny-nginx`)
+- [x] Shiny Server Pro 1.5.9 running on Ubuntu 16.04 ([`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker))
+- [x] Shiny Floating License Server ([`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker))
+- [x] Multi-factor authentication with Auth0 ([`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0))
+- [x] Reverse-proxying with NginX ([`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker))
 
-Please see the [RStudio Documentation](http://docs.rstudio.com/shiny-server/) for more information.
+Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 ## Install
 
@@ -55,6 +55,7 @@ bash stop-shiny-server-pro.sh
 ```bash
 # show logs
 docker-compose logs -f
+# (use ctrl-c to exit logs and keep containers running)
 ```
 
 ### Show running Docker containers
