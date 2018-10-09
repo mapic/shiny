@@ -1,4 +1,4 @@
-# Shiny Server Pro
+# Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 
 ## About
 
@@ -7,6 +7,7 @@ These are the Docker Compose files for a Shiny Server Pro. It includes:
 - [x] Shiny Floating License Server ([`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker))
 - [x] Multi-factor authentication with Auth0 ([`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0))
 - [x] Reverse-proxying with NginX ([`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker))
+- [x] Secure FTP for uploading of Shiny apps ([`mapic/sftp`](https://github.com/mapic/sftp))
 
 Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
