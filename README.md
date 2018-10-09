@@ -1,4 +1,5 @@
-# Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
+# Shiny 
+Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 
 ## About
 
