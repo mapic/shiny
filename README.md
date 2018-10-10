@@ -4,7 +4,7 @@ Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 ## About
 
 These are the Docker Compose files for a Shiny Server Pro. It includes:
-- [x] Shiny Server Pro 1.5.9 running on Ubuntu 16.04 ([`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker))
+- [x] Shiny Server Pro 1.5.10 running on Ubuntu 16.04 ([`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker))
 - [x] Shiny Floating License Server ([`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker))
 - [x] Multi-factor authentication with Auth0 ([`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0))
 - [x] Reverse-proxying with NginX ([`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker))
@@ -25,7 +25,6 @@ cd shiny
 #### Configure Shiny
 Edit the `config/shiny-server.conf`. See http://docs.rstudio.com/shiny-server/#configuration-settings for details on configuration settings.
 
-
 #### Configure NginX
 Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
 
@@ -43,20 +42,20 @@ In order for the Shiny Server Pro server to work, you need to have a running flo
 
 ```bash
 # start server
-bash start-shiny-server-pro.sh
+bash start-shiny.sh
 ```
 
 ### Stop server
 ```bash
 # stop server
-bash stop-shiny-server-pro.sh
+bash stop-shiny.sh
 # (use ctrl-c to exit logs and keep containers running)
 ```
 
 ### Show logs
 ```bash
 # show logs
-docker-compose logs -f
+docker-compose logs -f -t
 # (use ctrl-c to exit logs and keep containers running)
 ```
 
