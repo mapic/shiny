@@ -4,3 +4,4 @@ auth0.conf
 *_key
 *_key.pub
 sftp.users.conf
+shiny-passwd

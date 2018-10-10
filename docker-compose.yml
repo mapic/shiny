@@ -37,6 +37,7 @@ services:
         max-file: "10"
     volumes:
       - ./config/shiny-server.conf:/etc/shiny-server/shiny-server.conf
+      - ./config/shiny-passwd:/etc/shiny-server/passwd
       - shiny-data:/srv/shiny-server/apps # shiny data volume shared with sftp folder
 
   sftp:
