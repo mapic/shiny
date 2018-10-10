@@ -4,7 +4,7 @@ Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 ## About
 
 These are the Docker Compose files for a Shiny Server Pro. It includes:
-- [x] Shiny Server Pro 1.5.10 running on Ubuntu 16.04 ([`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker))
+- [x] Shiny Server Pro 1.5.10 running on Ubuntu 16.04 ([`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker)) [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker)
 - [x] Shiny Floating License Server ([`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker))
 - [x] Multi-factor authentication with Auth0 ([`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0))
 - [x] Reverse-proxying with NginX ([`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker))
