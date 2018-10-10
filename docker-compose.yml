@@ -23,9 +23,9 @@ services:
     env_file: config/auth0.env
     command: "npm start"
     restart: unless-stopped
-    # volumes:                              # for debug only
-      # - ../shiny-auth0/app/:/usr/src/app  # for debug only
-    # command: "bash docker-entrypoint.sh"  # for debug only
+    # volumes:                              # dev mode
+      # - ../shiny-auth0/app/:/usr/src/app  # dev mode
+    # command: "bash docker-entrypoint.sh"  # dev mode
 
   shiny:
     image: mapic/shiny-server-pro:latest
@@ -44,7 +44,7 @@ services:
     image: atmoz/sftp
     restart: unless-stopped
     volumes:
-        - shiny-data:/home/shiny/upload # shiny data volumne shared with shiny
+        - shiny-data:/home/shiny/upload # shiny data volume shared with shiny
         - ./config/sftp.users.conf:/etc/sftp/users.conf:ro
     ports:
         - "2222:22"
