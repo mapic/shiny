@@ -21,11 +21,12 @@ services:
   auth0:
     image: mapic/shiny-auth0:latest
     env_file: config/auth0.env
-    command: "npm start"
     restart: unless-stopped
-    # volumes:                              # dev mode
-      # - ../shiny-auth0/app/:/usr/src/app  # dev mode
-    # command: "bash docker-entrypoint.sh"  # dev mode
+    # command: "npm start"
+    volumes:                              # dev mode
+      - ../shiny-auth0/app/:/usr/src/app  # dev mode
+      - shiny-logs:/usr/src/logs
+    command: "bash docker-entrypoint.sh"  # dev mode
 
   shiny:
     image: mapic/shiny-server-pro:latest
@@ -38,6 +39,7 @@ services:
     volumes:
       - ./config/shiny-server.conf:/etc/shiny-server/shiny-server.conf
       - ./config/shiny-passwd:/etc/shiny-server/passwd
+      - shiny-logs:/var/log/shiny-server/
       - shiny-data:/srv/shiny-server/apps # shiny data volume shared with sftp folder
 
   sftp:
@@ -56,3 +58,4 @@ networks:
 
 volumes:
   shiny-data:
+  shiny-logs:
