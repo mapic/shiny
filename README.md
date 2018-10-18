@@ -11,7 +11,7 @@ These are the Docker Compose files for a Shiny Server Pro. It includes:
 | [`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker)    | Shiny Floating License Server                         | [![Build Status](https://travis-ci.org/mapic/shiny-floating-license-server.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-floating-license-server.docker) |
 | [`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0)                                               | Multi-factor authentication with Auth0                | [![Build Status](https://travis-ci.org/mapic/shiny-auth0.svg?branch=master)](https://travis-ci.org/mapic/shiny-auth0) |
 | [`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker)                                        | NginX Reverse-Proxy with SSL                          | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
-| [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | |
+| [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
 
 
 Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
