@@ -15,6 +15,7 @@ These are the Docker Compose files for a Shiny Server Pro. It includes:
 
 
 Versions:
+
 | Program               | Version | Release Date | Changelog | 
 | -------               | ------- | ------------ | --------- |
 | R                     | 3.4.4   | 2018-03-15   | ["Someone To Lean On"](https://stat.ethz.ch/pipermail/r-announce/2018/000626.html) |
