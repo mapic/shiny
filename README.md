@@ -68,10 +68,9 @@ bash stop-shiny.sh
 # (use ctrl-c to exit logs and keep containers running)
 ```
 
-## About
 
 
-### Versions
+## Versions
 
 | Program               | Version | Release Date | Changelog | 
 | -------               | ------- | ------------ | --------- |
