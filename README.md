@@ -48,7 +48,7 @@ Then add Auth0 settings to the `config/auth0.env` file.
 Optionally edit the `config/shiny-server.conf`. Defaults will work, but see the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
 
 
-## Start / stop
+## Start & Stop
 
 ### 1. Start Floating License Server
 In order for the Shiny Server Pro server to work, you need to have a running floating license server. Please see https://github.com/mapic/shiny-floating-license-server.docker for easy install.
