@@ -3,7 +3,8 @@ Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 
 ## About
 
-These are the Docker Compose files for a Shiny Server Pro. It includes:
+### Docker Images 
+These are the Docker images for a Shiny setup. It includes:
 
 | Docker Image        | Description           | Build status  |
 | ------------- |-------------|:-----:|
@@ -14,7 +15,7 @@ These are the Docker Compose files for a Shiny Server Pro. It includes:
 | [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
 
 
-Versions:
+### Versions
 
 | Program               | Version | Release Date | Changelog | 
 | -------               | ------- | ------------ | --------- |
