@@ -1,6 +1,7 @@
 # Shiny 
 Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 
+Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 ## Install & Configure
 
@@ -80,5 +81,4 @@ These are the Docker images for a Shiny setup. It includes:
 | Shiny Server (Pro)    | 1.5.10  | 2018-09-20   | [PRO](https://support.rstudio.com/hc/en-us/articles/215642837-Shiny-Server-Pro-Release-History) / [OS](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
 | Ubuntu                | 16.04   | 2018-08-03   | [16.04.3](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
 
-Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
