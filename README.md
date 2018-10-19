@@ -35,45 +35,49 @@ cd shiny
 
 ## Configure
 
-#### Configure Shiny
-Edit the `config/shiny-server.conf`. See http://docs.rstudio.com/shiny-server/#configuration-settings for details on configuration settings.
-
 #### Configure NginX
 Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
 
 #### Configure Auth0
-Edit the `config/auth0.env` file (copy it from the default `auth0.env.default` file first).
+```bash
+# copy the template 
+cd config
+cp auth0.env.default auth0.env
+```
+Then add Auth0 settings to the `config/auth0.env` file.
 
-That's it!
+#### Configure Shiny
+Optionally edit the `config/shiny-server.conf`. Defaults will work, but see the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
 
-## Run
 
-### Start Floating License Server
+## Start / stop
+
+### 1. Start Floating License Server
 In order for the Shiny Server Pro server to work, you need to have a running floating license server. Please see https://github.com/mapic/shiny-floating-license-server.docker for easy install.
 
-### Start server
+### 2. Start Shiny Server Pros
 
 ```bash
 # start server
 bash start-shiny.sh
 ```
 
-### Stop server
-```bash
-# stop server
-bash stop-shiny.sh
-# (use ctrl-c to exit logs and keep containers running)
-```
-
-### Show logs
+### 3. Show logs
 ```bash
 # show logs
 docker-compose logs -f -t
 # (use ctrl-c to exit logs and keep containers running)
 ```
 
-### Show running Docker containers
+### 4. Show running Docker containers
 ```bash
 # show running docker containers
 docker ps
+```
+
+### 5. Stop server
+```bash
+# stop server
+bash stop-shiny.sh
+# (use ctrl-c to exit logs and keep containers running)
 ```
