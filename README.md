@@ -33,10 +33,10 @@ cd shiny
 
 ```
 
-#### Configure NginX
+### Configure NginX
 Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
 
-#### Configure Auth0
+### Configure Auth0
 ```bash
 # copy the template 
 cd config
@@ -44,7 +44,7 @@ cp auth0.env.default auth0.env
 ```
 Then add Auth0 settings to the `config/auth0.env` file. See the [wiki](https://github.com/mapic/shiny/wiki/Auth0-Configuration) for more information on Auth0 settings.
 
-#### Configure Shiny
+### Configure Shiny
 Optionally edit the `config/shiny-server.conf`. Defaults will work, but see the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
 
 
