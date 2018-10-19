@@ -1,7 +1,23 @@
-# Shiny 
+# Shiny Server
 Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
 
 Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
+
+| Docker Image        | Description           | Build status  |
+| ------------- |-------------|:-----:|
+| [`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker)                              | Shiny Server Pro 1.5.10 running on Ubuntu 16.04       | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
+| [`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker)    | Shiny Floating License Server                         | [![Build Status](https://travis-ci.org/mapic/shiny-floating-license-server.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-floating-license-server.docker) |
+| [`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0)                                               | Multi-factor authentication with Auth0                | [![Build Status](https://travis-ci.org/mapic/shiny-auth0.svg?branch=master)](https://travis-ci.org/mapic/shiny-auth0) |
+| [`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker)                                        | NginX Reverse-Proxy with SSL                          | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
+| [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
+
+
+| Program               | Version | Release Date | Changelog | 
+| -------               | ------- | ------------ | --------- |
+| R                     | 3.4.4   | 2018-03-15   | _["Someone To Lean On"](https://stat.ethz.ch/pipermail/r-announce/2018/000626.html)_ |
+| Shiny Server (Pro)    | 1.5.10  | 2018-09-20   | [PRO](https://support.rstudio.com/hc/en-us/articles/215642837-Shiny-Server-Pro-Release-History) / [OS](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
+| Ubuntu                | 16.04   | 2018-08-03   | [16.04.3](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
+
 
 ## Install & Configure
 
@@ -64,21 +80,5 @@ bash stop-shiny.sh
 ### Docker Images 
 These are the Docker images for a Shiny setup. It includes:
 
-| Docker Image        | Description           | Build status  |
-| ------------- |-------------|:-----:|
-| [`mapic/shiny-server-pro`](https://github.com/mapic/shiny-server-pro.docker)                              | Shiny Server Pro 1.5.10 running on Ubuntu 16.04       | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
-| [`mapic/shiny-floating-license-server`](https://github.com/mapic/shiny-floating-license-server.docker)    | Shiny Floating License Server                         | [![Build Status](https://travis-ci.org/mapic/shiny-floating-license-server.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-floating-license-server.docker) |
-| [`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0)                                               | Multi-factor authentication with Auth0                | [![Build Status](https://travis-ci.org/mapic/shiny-auth0.svg?branch=master)](https://travis-ci.org/mapic/shiny-auth0) |
-| [`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker)                                        | NginX Reverse-Proxy with SSL                          | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
-| [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
-
-
-### Versions
-
-| Program               | Version | Release Date | Changelog | 
-| -------               | ------- | ------------ | --------- |
-| R                     | 3.4.4   | 2018-03-15   | _["Someone To Lean On"](https://stat.ethz.ch/pipermail/r-announce/2018/000626.html)_ |
-| Shiny Server (Pro)    | 1.5.10  | 2018-09-20   | [PRO](https://support.rstudio.com/hc/en-us/articles/215642837-Shiny-Server-Pro-Release-History) / [OS](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
-| Ubuntu                | 16.04   | 2018-08-03   | [16.04.3](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
 
 
