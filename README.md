@@ -25,15 +25,13 @@ These are the Docker images for a Shiny setup. It includes:
 
 Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
-## Install
+## Install & Configure
 
 ```bash
 git clone https://github.com/mapic/shiny.git
 cd shiny
 
 ```
-
-## Configure
 
 #### Configure NginX
 Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
