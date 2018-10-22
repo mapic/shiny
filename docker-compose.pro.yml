@@ -29,7 +29,7 @@ services:
     # command: "bash docker-entrypoint.sh"  # dev mode
 
   shiny:
-    image: mapic/shiny-server:latest
+    image: mapic/shiny-server-pro:latest
     env_file: config/shiny.env
     restart: unless-stopped
     logging:
@@ -38,7 +38,7 @@ services:
         max-file: "10"
     volumes:
       - ./config/shiny-server.conf:/etc/shiny-server/shiny-server.conf
-      # - ./config/shiny-passwd:/etc/shiny-server/passwd
+      - ./config/shiny-passwd:/etc/shiny-server/passwd
       - shiny-logs:/var/log/shiny-server/
       - shiny-data:/srv/shiny-server/apps # shiny data volume shared with sftp folder
 
