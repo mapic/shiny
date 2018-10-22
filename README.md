@@ -25,7 +25,7 @@ Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 ## Configure
 
-## Download this repository
+### Download this repository
 ```bash
 git clone https://github.com/mapic/shiny.git
 cd shiny
