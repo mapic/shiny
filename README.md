@@ -1,5 +1,5 @@
 # Shiny Server
-Self-hosting of Shiny Apps with Shiny Server Pro Docker setup
+Self-hosting of Shiny Apps with Shiny Server Docker setup
 
 Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
@@ -17,35 +17,33 @@ Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 | Program               | Version | Release Date | Changelog | 
 | -------               | ------- | ------------ | --------- |
-| Shiny Server          | 1.5.9   | 2018-09-12   | [Pro](https://support.rstudio.com/hc/en-us/articles/215642837-Shiny-Server-Pro-Release-History) / [Open Source](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
+| Shiny Server          | 1.5.9   | 2018-09-12   | [Open Source](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
 | R                     | 3.5.1   | 2018-07-02   | _["Feather Spray"](https://stat.ethz.ch/pipermail/r-announce/2018/000626.html)_ |
-| Ubuntu                | 16.04   | 2018-08-03   | [16.04.3](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
+| Ubuntu                | 16.04   | 2018-08-03   | [xenial](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
 
 
 
-## Install
+## Configure
 
-### Download repo
+## Download this repository
 ```bash
 git clone https://github.com/mapic/shiny.git
 cd shiny
 
 ```
 
-## Configure
 ### Configure NginX
-Edit the `config/nginx.conf` and `config/nginx.certbot.conf` and replace the `server_name` values with your domain.
+Replace the `server_name` values with your domain in `config/nginx.conf` and `config/nginx.certbot.conf`.
 
 ### Configure Auth0
 ```bash
 # copy the template 
-cd config
-cp auth0.env.default auth0.env
+cp config/auth0.env.default config/auth0.env
 ```
-Then add Auth0 settings to the `config/auth0.env` file. See the [wiki](https://github.com/mapic/shiny/wiki/Auth0-Configuration) for more information on Auth0 settings.
+Then add your Auth0.com credentials to the `config/auth0.env` file. See the [wiki](https://github.com/mapic/shiny/wiki/Auth0-Configuration) for more information on Auth0 settings.
 
 ### Configure Shiny Server
-Optionally edit the `config/shiny-server.conf`. Defaults will work, but see the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
+Optionally edit the `config/shiny-server.conf`. Defaults will work. See the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
 
 
 ## Start Shiny Server
@@ -62,11 +60,10 @@ docker-compose logs -f -t
 # (use ctrl-c to exit logs and keep containers running)
 ```
 
-### 5. Stop server
+### Stop Shiny Server
 ```bash
 # stop server
 bash stop-shiny.sh
-# (use ctrl-c to exit logs and keep containers running)
 ```
 
 
