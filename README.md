@@ -23,7 +23,7 @@ Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 
 
-## Configure
+## Installation
 
 ### Download this repository
 ```bash
