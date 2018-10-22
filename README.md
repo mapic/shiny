@@ -14,7 +14,7 @@ Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 | [`mapic/sftp`](https://github.com/mapic/sftp)                                                             | Secure FTP for uploading of Shiny apps                | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
 
 
-## Versions
+### Versions
 
 | Program               | Version | Release Date | Changelog | 
 | -------               | ------- | ------------ | --------- |
