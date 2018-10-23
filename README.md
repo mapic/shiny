@@ -1,7 +1,6 @@
 # Shiny Server
-Self-hosting of Shiny Apps with Shiny Server Docker setup
+Self-hosting of Shiny Apps with Shiny Server Docker setup. Please see the [wiki](https://github.com/mapic/shiny/wiki) for details.
 
-Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 
 ### Docker Images
 
@@ -20,8 +19,10 @@ Please see the [wiki](https://github.com/mapic/shiny/wiki) for more information.
 | Shiny Server          | 1.5.9   | 2018-09-12   | [Open Source](https://github.com/rstudio/shiny-server/blob/master/NEWS) |
 | R                     | 3.5.1   | 2018-07-02   | _["Feather Spray"](https://stat.ethz.ch/pipermail/r-announce/2018/000626.html)_ |
 | Ubuntu                | 16.04   | 2018-08-03   | [xenial](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3) |
+| NodeJS                | v8.11.3 | 2018-06-12   | [LTS](https://nodejs.org/en/blog/release/v8.11.3/)
 
-
+#### R packages versions
+Please see the [wiki/Versions](https://github.com/mapic/shiny/wiki/Versions) for a list of R package versions.
 
 ## Installation
 
