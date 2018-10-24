@@ -26,45 +26,27 @@ Please see the [wiki/Versions](https://github.com/mapic/shiny/wiki/Versions) for
 
 ## Installation
 
-### Download this repository
-```bash
-git clone https://github.com/mapic/shiny.git
-cd shiny
+See the [wiki](https://github.com/mapic/shiny/wiki/How-to-setup-a-Shiny-Server-on-Amazon-AWS#install-mapicshiny-repository) for installation instructions.
 
-```
+## Manage Shiny Server
 
-### Configure NginX
-Replace the `server_name` values with your domain in `config/nginx.conf` and `config/nginx.certbot.conf`.
-
-### Configure Auth0
-```bash
-# copy the template 
-cp config/auth0.env.default config/auth0.env
-```
-Then add your Auth0.com credentials to the `config/auth0.env` file. See the [wiki](https://github.com/mapic/shiny/wiki/Auth0-Configuration) for more information on Auth0 settings.
-
-### Configure Shiny Server
-Optionally edit the `config/shiny-server.conf`. Defaults will work. See the [offical documentation](http://docs.rstudio.com/shiny-server/#configuration-settings) for details on configuration settings.
-
-
-## Start Shiny Server
-
+### Start 
 ```bash
 # start server
 bash start-shiny.sh
 ```
 
-### Show logs
+### Stop
+```bash
+# stop server
+bash stop-shiny.sh
+```
+
+### Show running logs
 ```bash
 # show logs
 docker-compose logs -f -t
 # (use ctrl-c to exit logs and keep containers running)
-```
-
-### Stop Shiny Server
-```bash
-# stop server
-bash stop-shiny.sh
 ```
 
 

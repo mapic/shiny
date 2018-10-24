@@ -5,3 +5,4 @@ auth0.conf
 *_key.pub
 sftp.users.conf
 shiny-passwd
+!config/nginx.env
