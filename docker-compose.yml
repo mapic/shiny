@@ -22,11 +22,11 @@ services:
     image: mapic/shiny-auth0:latest
     env_file: config/auth0.env
     restart: unless-stopped
-    command: "npm start"
     volumes:                              
       - shiny-logs:/usr/src/logs
       # - ../shiny-auth0/app/:/usr/src/app  # dev mode
     # command: "bash docker-entrypoint.sh"  # dev mode
+    command: "npm start"                    # prod mode
 
   shiny:
     image: mapic/shiny-server:latest
