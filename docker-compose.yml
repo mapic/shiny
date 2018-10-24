@@ -42,7 +42,7 @@ services:
       - shiny-data:/srv/shiny-server/apps # shiny data volume shared with sftp folder
 
   sftp:
-    image: atmoz/sftp
+    image: mapic/sftp:latest
     restart: unless-stopped
     volumes:
         - shiny-data:/home/shiny/upload # shiny data volume shared with shiny
