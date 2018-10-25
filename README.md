@@ -9,7 +9,7 @@ Self-hosting of Shiny Apps with Shiny Server Docker setup. Please see the [wiki]
 | [`mapic/shiny-server`](https://github.com/mapic/shiny-server.docker)    | Shiny Server 1.5.9                         | [![Build Status](https://travis-ci.org/mapic/shiny-server.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-server.docker) |
 | [`mapic/shiny-auth0`](https://github.com/mapic/shiny-auth0)             | Multi-factor authentication with Auth0     | [![Build Status](https://travis-ci.org/mapic/shiny-auth0.svg?branch=master)](https://travis-ci.org/mapic/shiny-auth0) |
 | [`mapic/shiny-nginx`](https://github.com/mapic/shiny-nginx.docker)      | NginX Reverse-Proxy with SSL               | [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker) |
-| [`mapic/sftp`](https://github.com/mapic/sftp)                           | Secure FTP for uploading of Shiny apps     | [![Build Status](https://travis-ci.org/mapic/sftp.docker.svg?branch=master)](https://travis-ci.org/mapic/sftp.docker) |
+| [`mapic/sftp`](https://github.com/mapic/sftp)                           | Secure FTP for uploading of Shiny apps     | [![Build Status](https://travis-ci.org/mapic/sftp.svg?branch=master)](https://travis-ci.org/mapic/sftp) |
 
 
 ### Versions
