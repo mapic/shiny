@@ -33,20 +33,19 @@ See the [wiki](https://github.com/mapic/shiny/wiki/How-to-setup-a-Shiny-Server-o
 ### Start 
 ```bash
 # start server
-bash start-shiny.sh
+docker-compose up
 ```
 
 ### Stop
 ```bash
 # stop server
-bash stop-shiny.sh
+docker-compose kill
 ```
 
 ### Show running logs
 ```bash
 # show logs
 docker-compose logs -f -t
-# (use ctrl-c to exit logs and keep containers running)
 ```
 
 
