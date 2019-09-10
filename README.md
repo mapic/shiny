@@ -1,7 +1,6 @@
 # Shiny Server
 Self-hosting of Shiny Apps with Shiny Server Docker setup. Please see the [wiki](https://github.com/mapic/shiny/wiki) for details.
 
-
 ### Docker Images
 
 | Docker Image        | Description           | Build status  |
@@ -48,4 +47,5 @@ docker-compose kill
 docker-compose logs -f -t
 ```
 
+Testing...
 
