@@ -17,16 +17,39 @@ services:
         max-size: "5k"
         max-file: "10"
     command: "bash docker-entrypoint.sh"
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 30s
+        max_attempts: 3
+
+  # auth0:
+  #   # image: mapic/shiny-auth0:latest
+  #   image: mapic/auth0-express:latest
+  #   env_file: config/auth0.env
+  #   restart: unless-stopped
+  #   volumes:                              
+  #     - shiny-logs:/usr/src/logs
+  #     - ../shiny-auth0/app/:/usr/src/app  # dev mode
+  #   command: "bash docker-entrypoint.sh"  # dev mode
+  #   # command: "npm start"                    # prod mode
+  #   environment: 
+  #     DEBUG: "true"
+
 
   auth0:
-    image: mapic/shiny-auth0:latest
+    # image: mapic/shiny-auth0:latest
+    image: mapic/auth0-express:latest
     env_file: config/auth0.env
     restart: unless-stopped
     volumes:                              
       - shiny-logs:/usr/src/logs
-      # - ../shiny-auth0/app/:/usr/src/app  # dev mode
+      - ../auth0-node-express/app/:/home/app  # dev mode
+      - ./config/auth0.env:/home/app/.env
     # command: "bash docker-entrypoint.sh"  # dev mode
     command: "npm start"                    # prod mode
+    environment: 
+      DEBUG: "true"
 
   shiny:
     image: mapic/shiny-server:latest
