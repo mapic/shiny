@@ -1,9 +1,8 @@
 *.pem
-auth0.conf
 *.env
 *_key
 *_key.pub
-sftp.users.conf
 shiny-passwd
-!config/nginx.env
+config
+!config/*.default
 ssl/old
