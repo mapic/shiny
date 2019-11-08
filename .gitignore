@@ -3,6 +3,7 @@
 *_key
 *_key.pub
 shiny-passwd
-config
+!config/
+config/*
 !config/*.default
 ssl/old
