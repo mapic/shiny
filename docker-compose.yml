@@ -20,15 +20,15 @@ services:
     command: "bash docker-entrypoint.sh"
 
   auth0:
-    # image: mapic/auth0-express:latest # closed, authenticated
-    image: mapic/auth0-express:open # open, no authentication
+    image: mapic/auth0-express:latest # closed, authenticated
+    # image: mapic/auth0-express:open # open, no authentication
     env_file: config/auth0.env
     restart: unless-stopped
     volumes:                              
       - shiny-logs:/usr/src/logs
       - ./config/auth0.env:/home/app/.env
-      # - ../auth0-express/app/:/home/app     # dev mode
-      - ../auth0-express/open-app/:/home/app     # open, no authentication
+      - ../auth0-express/app/:/home/app     # dev mode
+      # - ../auth0-express/open-app/:/home/app     # open, no authentication
     command: "npm start"                    
     environment: 
       DEBUG: "true"
