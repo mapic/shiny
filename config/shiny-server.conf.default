@@ -1,0 +1,30 @@
+# Instruct Shiny Server to run applications as the user "shiny"
+run_as shiny;
+
+# disable websockets
+# disable_websockets true;
+
+# Define a server 
+server {
+
+  # that listens on port 3838
+  listen 3838;
+
+  # Define a location at the base URL
+  location / {
+
+    # Host the directory of Shiny Apps stored in this directory
+    site_dir /srv/shiny-server/apps;
+
+    # Log all Shiny output to files in this directory
+    log_dir /var/log/shiny-server/;
+
+    # When a user visits the base URL rather than a particular application,
+    # an index of the applications available in this directory will be shown.
+    directory_index off;
+
+    # Increased Idle timeout
+    app_idle_timeout 0;
+
+  }
+}

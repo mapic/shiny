@@ -1,0 +1,89 @@
+daemon off;
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 768;
+}
+
+http {
+
+    sendfile                            on;
+    tcp_nopush                          on;
+    tcp_nodelay                         on;
+    keepalive_timeout                   65;
+    types_hash_max_size                 2048;
+    include                             /etc/nginx/mime.types;
+    default_type                        application/octet-stream;
+    gzip                                on;
+    gzip_disable                        "msie6";
+    proxy_set_header                    X-Real-IP $remote_addr;
+    proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header                    Host $http_host;
+    proxy_set_header                    X-NginX-Proxy true;
+    proxy_redirect                      off;
+    proxy_ssl_session_reuse             off;
+    add_header                          Access-Control-Allow-Origin *;
+    
+    
+    # listen @ 80   
+    server {    
+        listen                          80;
+        server_name                     public-cloud.ngi.no;
+
+        # for certbot to create SSL certificates
+        location ~ /.well-known {
+            root                        /var/www/html;
+            allow                       all;
+        }
+        
+        location / {
+            return 301 https://$server_name$request_uri;
+        }
+    }
+
+    # listen @ 443
+    server {
+
+        listen                          443 ssl;
+        server_name                     public-cloud.ngi.no;
+        client_max_body_size            2000m;
+        add_header                      Strict-Transport-Security "max-age=63072000; includeSubdomains;";
+        add_header                      Access-Control-Allow-Origin *;
+        ssl_session_cache               shared:SSL:1m;
+        ssl_session_timeout             10m;
+        ssl_stapling                    on;    
+        ssl_stapling_verify             on; 
+        ssl_certificate                 /home/ssl/fullchain.pem;
+        ssl_certificate_key             /home/ssl/privkey.pem;
+        ssl_verify_client               off;
+        ssl_protocols                   TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers                     'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+        ssl_prefer_server_ciphers       on;
+        ssl_dhparam                     /home/ssl/dhparams.pem;
+
+        # auth0 server
+        location / {
+            proxy_set_header            Host $host;
+
+            # This points to our shiny-auth0 authentication proxy,
+            proxy_pass                  http://auth0:3000;
+            proxy_redirect              http://auth0:3000/ $scheme://$host/;
+        
+            proxy_http_version          1.1;
+           
+            # The following lines enable WebSockets proxying, do not remove them
+            # as they are used by Shiny Server to improve user experience
+            proxy_set_header            Upgrade $http_upgrade;
+            proxy_set_header            Connection "upgrade";
+
+            proxy_connect_timeout       7d;
+            proxy_send_timeout          7d;
+            proxy_read_timeout          7d;
+            proxy_buffering             off;
+       }
+
+    }
+
+}
