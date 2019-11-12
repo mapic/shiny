@@ -51,6 +51,7 @@ services:
     restart: unless-stopped
     volumes:
         - shiny-data:/home/shiny/upload # shiny data volume shared with shiny
+        - shiny-logs:/home/shiny/upload/logs
         - ./config/sftp.users.conf:/etc/sftp/users.conf:ro
     ports:
         - "2222:22"
