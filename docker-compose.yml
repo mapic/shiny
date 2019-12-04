@@ -27,8 +27,8 @@ services:
     volumes:                              
       - shiny-logs:/usr/src/logs
       - ./config/auth0.env:/home/app/.env
-      - ../auth0-express/app/:/home/app     # dev mode
-      # - ../auth0-express/open-app/:/home/app     # open, no authentication
+      - ../auth0-express/app/:/home/app           # closed, authenticated
+      # - ../auth0-express/open-app/:/home/app      # open, no authentication
     command: "npm start"                    
     environment: 
       DEBUG: "true"
