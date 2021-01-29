@@ -20,7 +20,7 @@ then
     bash start-shiny.sh
     
     echo 
-    echo "SSL certificates updated. It may take a minute for the domain to back online."
+    echo "SSL certificates successfully updated! It may take a minute for the domain to get back online."
     echo 
 
 fi
